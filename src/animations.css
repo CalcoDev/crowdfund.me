@@ -1,0 +1,78 @@
+.animate-enter-left {
+    animation: enter-left 1s ease-in-out both;
+}
+
+.animate-enter-right {
+    animation: enter-right 1s ease-in-out both;
+}
+
+.animate-enter-top {
+    animation: enter-top 1s ease-in-out both;
+}
+
+.animate-enter-bottom {
+    animation: enter-bottom 1s ease-in-out both;
+}
+
+.animate-enter-center {
+    animation: enter-center 1s ease-in-out both;
+}
+
+:root {
+    --enter-value: 2em;
+}
+
+@keyframes enter-left {
+    from {
+        transform: translateX(calc(-1 * var(--enter-value)));
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes enter-right {
+    from {
+        transform: translateX(var(--enter-value));
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes enter-top {
+    from {
+        transform: translateY(calc(-1 * var(--enter-value)));
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes enter-bottom {
+    from {
+        transform: translateY(var(--enter-value));
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes enter-center {
+    from {
+        transform: scale(0.01);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
