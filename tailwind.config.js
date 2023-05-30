@@ -8,6 +8,9 @@ export default {
             'cfm-dark-grey': '#0B0C10',
             'cfm-white': '#FFFFFF',
             'cfm-transparent': 'transparent',
+            'cfm-light-yellow': '#FFF6C4',
+            'cfm-yellow': '#FFDD2B',
+            'cfm-card-bg': '#FFF',
             red: '#FF0000',
         },
         fontFamily: {

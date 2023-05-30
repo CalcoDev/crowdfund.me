@@ -6,18 +6,8 @@ import AnimationLoader from '../../managers/animation-loader/animation-loader.ma
 
 const secondaries = [
     {
-        left: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        right: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        image: '/images/landing-secondary/test.png',
-    },
-    {
-        left: 'ASDASDAS',
-        right: 'SHDAIUSHDIASUDHASUIHDAI',
-        image: '/images/landing-secondary/test.png',
-    },
-    {
-        left: 'ASDASDAS',
-        right: 'SHDAIUSHDIASUDHASUIHDAI',
+        left: 'Agricultura este una dintre cele mai importante industrii din lume, iar Crowd Fund Me își propune să faciliteze accesul la investiții în acest domeniu. ',
+        right: 'Platforma noastră conectează fermierii și antreprenorii agricoli care caută capital cu investitorii interesați de a obține randamente atractive și de a contribui la dezvoltarea sectorului agricol.',
         image: '/images/landing-secondary/test.png',
     },
 ]
@@ -43,7 +33,7 @@ function Home() {
                         CROWDFUND.ME
                     </h1>
                     <p className="cfm-subheader cfm-enter-bottom once cfm-delay-1 mb-4">
-                        lorem ipsum dolor sit amet
+                        Romanian investing company
                     </p>
                     <CfmButton className="cfm-enter-bottom once cfm-delay-2">
                         <Link to="/offers">OFFERS</Link>
@@ -74,12 +64,12 @@ function Home() {
                     relative
                 `}
             >
-                <p className="cfm-enter-left cfm-delay-2 col-start-2 col-end-4 cfm-subheader text-base leading-5 pr-[25%]">
+                <p className="cfm-enter-left once cfm-delay-2 col-start-2 col-end-4 cfm-subheader text-base leading-5 pr-[25%]">
                     {secondaries[sIdx].left}
                 </p>
 
                 <div className="col-start-4 col-end-7 flex">
-                    <div className="flex-1 flex items-center justify-start cfm-enter-right cfm-delay-1">
+                    <div className="flex-1 flex items-center justify-start once cfm-enter-right cfm-delay-1">
                         <img
                             className="
                                 rotate-90 w-1/2 max-w-[26px] min-2-[12px] 
@@ -96,12 +86,12 @@ function Home() {
 
                     <div className="flex-[3] relative">
                         <img
-                            className="cfm-enter-center flex-1"
+                            className="cfm-enter-center once flex-1"
                             src={secondaries[sIdx].image}
                         />
 
                         <div className="absolute bottom-0 w-full h-12 origin-top translate-y-full">
-                            <div className="cfm-enter-bottom cfm-delay-2 w-full h-full flex justify-around items-center">
+                            <div className="cfm-enter-bottom once cfm-delay-2 w-full h-full flex justify-around items-center">
                                 {secondaries.map((_, idx) =>
                                     idx === sIdx ? (
                                         <div key={idx}>
@@ -133,7 +123,7 @@ function Home() {
                         </div>
                     </div>
 
-                    <div className="flex-1 flex items-center justify-end cfm-enter-left cfm-delay-1">
+                    <div className="flex-1 flex items-center justify-end once cfm-enter-left cfm-delay-1">
                         <img
                             className="
                             -rotate-90 w-1/2 max-w-[26px] min-2-[12px] 
@@ -149,7 +139,7 @@ function Home() {
                     </div>
                 </div>
 
-                <p className="cfm-enter-right cfm-delay-2 col-start-7 col-end-9 cfm-subheader text-base leading-5 pl-[25%] text-end">
+                <p className="once cfm-enter-right cfm-delay-2 col-start-7 col-end-9 cfm-subheader text-base leading-5 pl-[25%] text-end">
                     {secondaries[sIdx].right}
                 </p>
             </section>

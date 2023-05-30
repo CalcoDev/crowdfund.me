@@ -64,12 +64,11 @@ const Contact = () => {
                         CONTACT
                     </h1>
                     <p className="cfm-enter-top once cfm-delay-1 cfm-subheader text-cfm-lighter-grey text-base leading-5">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Aliquam nisl metus, viverra id rutrum et, facilisis eget
-                        ligula. Mauris interdum viverra suscipit. Nullam ac
-                        lectus quis magna ultrices eleifend ac vel lorem.
-                        <br /> <br />
-                        Nullam dapibus, ipsum ut blandit sollicitudin, leo
+                        Email: crowd.fund.me.business@gmail.com
+                        <br />
+                        Adress: Bd. Pache Protopopescu Nr. 62
+                        <br />
+                        Phone number: 0723 240 466
                     </p>
                 </div>
             </section>

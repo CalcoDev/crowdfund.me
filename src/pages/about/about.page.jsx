@@ -1,6 +1,34 @@
 import AnimationLoader from '../../managers/animation-loader/animation-loader.manager'
 import Navigation from '../../components/navigation/navigation.component'
 import BnWImage from '../../components/bw-image/bw-image.component'
+import CompanyMemberCard from '../../components/company-member-card/company-member-card.component'
+
+const people = [
+    {
+        name: 'Andrei Dumitru-Munteanu',
+        role: 'Co-Founder',
+        imgSrc: '/people/andu.jpg',
+        description:
+            'Sunt un elev de liceu în vârstă de 16 ani și una dintre caracteristicile mele principale este pasiunea pentru antreprenoriat.',
+        linkedIn: 'not-yet',
+    },
+    {
+        name: 'Daniel Nica',
+        role: 'Co-Founder',
+        imgSrc: '/people/dan.jpg',
+        description:
+            'Sunt mereu dornic să descopăr lucruri noi și să explorez diverse domenii de cunoaștere.',
+        linkedIn: 'not-yet',
+    },
+    {
+        name: 'Serban Rosca',
+        role: 'Senior Programmer',
+        imgSrc: '/people/me.jpg',
+        description:
+            'Sunt un elev de 16 ani pasionat de programare. Mi-am propus sa imi ajut colegii si sa realizez partea de programare, datorita pasiunii pentru antreprenoriat si a potentialul experientei valoarease obtinute.',
+        linkedIn: 'not-yet',
+    },
+]
 
 const About = () => {
     return (
@@ -11,71 +39,27 @@ const About = () => {
             <section
                 className="
                     spacer bg-[url('/contact-wave.svg')] h-screen
-                    grid grid-cols-9 gap-2 grid-rows-9
+                    flex flex-col pt-[12vh] items-center
+                    pb-24
                 "
             >
-                <div className="cfm-enter-top once col-start-3 col-end-8 row-start-[2] row-end-[4] flex flex-col justify-center items-center">
+                <div className="cfm-enter-top once flex flex-col justify-center items-center">
                     <h1 className="cfm-header text-center">ABOUT US</h1>
                     <hr className="text-cfm-white border-2 rounded-md w-1/5 max-w-[2rem] mx-auto" />
                 </div>
 
-                <div className="cfm-enter-left cfm-delay-1 once col-start-2 col-end-5 row-start-[3] row-end-[9] flex justify-center items-center">
-                    <BnWImage src="/images/about/founders.png" alt="Founders" />
-                </div>
-
-                <p className="cfm-enter-right cfm-delay-1 once col-start-6 col-end-9 row-start-[3] row-end-[9] cfm-subheader text-sm flex justify-center items-center">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aliquam nisl metus, viverra id rutrum et, facilisis eget
-                    ligula. Mauris interdum viverra suscipit. Nullam ac lectus
-                    quis magna ultrices eleifend ac vel lorem.
-                    <br />
-                    <br />
-                    Nullam dapibus, ipsum ut blandit sollicitudin, leo justo
-                    volutpat orci, vitae viverra neque ligula condimentum risus.
-                    Sed urna leo, blandit at laoreet et, bibendum in odio.
-                </p>
-
-                <img
-                    onClick={(e) => {
-                        e.preventDefault()
-                        document.getElementById('secondary').scrollIntoView()
-                    }}
-                    className="
-                        cfm-enter-bottom once cfm-delay-3
-                        transition duration-300 ease-in-out 
-                        transform absolute bottom-8 left-1/2 -translate-x-1/2
-                        hover:scale-125 hover:cursor-pointer active:scale-90
-                    "
-                    src="/misc/arrow.svg"
-                />
-            </section>
-
-            <section
-                id="secondary"
-                className={`
-                    h-screen-fill
-                    bg-cfm-dark-grey
-                    grid grid-cols-9 gap-2
-                    items-center
-                `}
-            >
-                <p className="cfm-enter-left once col-start-2 col-end-5 cfm-subheader text-sm flex justify-center items-center">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aliquam nisl metus, viverra id rutrum et, facilisis eget
-                    ligula. Mauris interdum viverra suscipit. Nullam ac lectus
-                    quis magna ultrices eleifend ac vel lorem.
-                    <br />
-                    <br />
-                    Nullam dapibus, ipsum ut blandit sollicitudin, leo justo
-                    volutpat orci, vitae viverra neque ligula condimentum risus.
-                    Sed urna leo, blandit at laoreet et, bibendum in odio.
-                </p>
-
-                <div className="cfm-enter-right once col-start-6 col-end-9">
-                    <BnWImage
-                        src="/images/about/crowdfundme.png"
-                        alt="Founders"
-                    />
+                <div className="mt-20 flex h-4/5 w-3/5 gap-8">
+                    {people.map((person, index) => (
+                        <CompanyMemberCard
+                            className="flex-1"
+                            key={index}
+                            name={person.name}
+                            role={person.role}
+                            imgSrc={person.imgSrc}
+                            description={person.description}
+                            linkedIn={person.linkedIn}
+                        />
+                    ))}
                 </div>
             </section>
         </div>

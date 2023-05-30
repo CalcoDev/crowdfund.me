@@ -29,21 +29,21 @@ const navLinks = [
 ]
 
 const socials = [
-    {
-        title: 'Facebook',
-        imgSrc: '/icons/facebook.svg',
-        link: '/',
-    },
+    // {
+    //     title: 'Facebook',
+    //     imgSrc: '/icons/facebook.svg',
+    //     link: '/',
+    // },
     {
         title: 'Instagram',
         imgSrc: '/icons/instagram.svg',
         link: '/',
     },
-    {
-        title: 'Twitter',
-        imgSrc: '/icons/twitter.svg',
-        link: '/',
-    },
+    // {
+    //     title: 'Twitter',
+    //     imgSrc: '/icons/twitter.svg',
+    //     link: '/',
+    // },
 ]
 
 const Navigation = ({ className }) => {

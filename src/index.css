@@ -9,6 +9,14 @@
 
 html {
     scroll-behavior: smooth;
+    height: 100%;
+    min-height: fit-content;
+}
+
+body {
+    height: 100%;
+
+    min-height: fit-content;
 }
 
 @layer components {
